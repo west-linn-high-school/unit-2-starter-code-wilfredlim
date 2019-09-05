@@ -17,7 +17,7 @@ public class Facts
         System.out.println();
         
         double value = 0.7;
-        double newValue = value + 0.1;
+        double newValue = value + 0.2;
         System.out.println(newValue);
         
         System.out.print("Letters in the ");
