@@ -10,18 +10,15 @@ public class ScanPractice
 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a line of text:");
+        System.out.println("Enter a three numbers and get an average!");
 
-        String word = scan.next();
+        int num1 = scan.nextInt();
+        int num2 = scan.nextInt();
+        int num3 = scan.nextInt();
 
-        String line = scan.nextLine();
+        int avgNum = ((num1 + num2 + num3)/3);
 
-        System.out.println(word);
-        System.out.println(line);
-
-        // DecimalFormat fmt = new DecimalFormat("0.###");
-        // System.out.println("A formatted decimal: " + fmt.format(15.2346672));
-        // fmt.applyPattern("0.#");
-        // System.out.println("Uses a new format: " + fmt.format(15.2346672));
+        System.out.println("The average of " + num1 + ", " + num2 + ", and "
+        + num3 + " is = " + avgNum);
     }
 }
