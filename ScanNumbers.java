@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class ScanDouble
+public class ScanNumbers
 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
