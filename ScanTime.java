@@ -9,10 +9,7 @@ public class ScanTime
         double min = scan.nextInt();
         double sec = scan.nextInt();
 
-        double sum  = (num1 + num2);
-        double diff = (num1 - num2);
-        double prod = (num1*num2);
-        double quot = (num1/num2);
+        double totSec =((hours*3600)+(min*60)+sec);
 
         System.out.println("That is " + totSec + " in seconds!");
     }
