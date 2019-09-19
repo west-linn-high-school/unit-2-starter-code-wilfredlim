@@ -6,9 +6,9 @@ public class Store{
         final double MOVIES = 13.97;
         final double NUTS_PER_POUND = 1.72;
         final double BOOK_SHIP = 0.95;
+        final double MOVIE_SHIP = .04;
         final double NUT_SHIP_POUND = 0.30;
-        final double MOVIE_SHIP = (MOVIES)*.04;
-        final double TAX = (MOVIES + BOOKS)* 0.072;
+        final double TAX = 0.072;
 
         System.out.println ("Enter number of books ordered:");
         double totBook = scan.nextDouble();
@@ -17,5 +17,16 @@ public class Store{
         System.out.println("Enter amount of peanuts (pounds) ordered:");
         double totNutPound = scan.nextDouble();
 
-        
+        double book$ = (totBook * BOOKS);
+        System.out.println("Book Price: " + book$);
+        double movie$ = (totMovie * MOVIES);
+        System.out.println("Movie Total Price: " + movie$);
+        double nut$ = (totNutPound * NUTS_PER_POUND);
+        System.out.println("Nuts Total Price: " + nut$);
+
+        System.out.print("Total shipping cost: " + (book$* BOOK_SHIP));
+        System.out.print( + (movie$ * totMovie) );
+
       }
+
+}
