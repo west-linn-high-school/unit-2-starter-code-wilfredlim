@@ -4,6 +4,8 @@ import java.util.Random;
 public class Store{
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        Random rand = new Random();
+      
         final double BOOKS = 9.0;
         final double MOVIES = 13.97;
         final double NUTS_PER_POUND = 1.72;
