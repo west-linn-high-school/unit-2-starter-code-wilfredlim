@@ -3,6 +3,8 @@ import javafx.scene.Scene;
 import javafx.scene.Group;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Line;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -10,20 +12,38 @@ import javafx.stage.Stage;
 public class Picture extends Application {
 
   public void start(Stage stage){
-    Text hello = new Text(50, 50, "Good Morning!");
-    Text question = new Text(120, 80, "How's it going?");
-    Rectangle box = new Rectangle(0, 100, 500, 20);
-    Circle sun = new Circle( 0, 110, 110);
+    Text hello = new Text(200, 150, "Good Morning!");
+    Text question = new Text(220, 100, "Take the apple!");
+    Rectangle grass = new Rectangle(0, 150, 400, 200);
+    Rectangle trunk = new Rectangle(40, 50, 20, 100);
+    Circle sun = new Circle( 350, 40, 25);
+    Ellipse leafOne = new Ellipse (50, 35, 40, 35);
+    Ellipse leafTwo = new Ellipse (30, 65, 40, 35);
+    Ellipse leafThree = new Ellipse (65, 65, 40, 35);
+    Circle apple = new Circle (60, 80, 5);
+    Line stem = new Line (60, 80, 60, 90);
 
+    trunk.setStroke(Color.SADDLEBROWN);
+    trunk.setFill(Color.SADDLEBROWN);
+    leafOne.setStroke(Color.FORESTGREEN);
+    leafOne.setFill(Color.DARKSEAGREEN);
+    leafTwo.setStroke(Color.FORESTGREEN);
+    leafTwo.setFill(Color.DARKSEAGREEN);
+    leafThree.setStroke(Color.FORESTGREEN);
+    leafThree.setFill(Color.DARKSEAGREEN);
     sun.setStroke(Color.YELLOW);
-    sun.setFill(Color.YELLOW);
-    box.setStroke(Color.GREEN);
-    box.setFill(Color.GREEN);
+    sun.setFill(Color.KHAKI);
+    grass.setStroke(Color.MEDIUMSEAGREEN);
+    grass.setFill(Color.MEDIUMSEAGREEN);
+    apple.setStroke(Color.CRIMSON);
+    apple.setFill(Color.CRIMSON);
+    stem.setStroke(Color.DARKRED);
 
-    Group root = new Group(hello, question, box);
-    Scene scene = new Scene(root, 300, 120, Color.LIGHTBLUE);
+    Group root = new Group(hello, question, grass, sun, trunk, leafOne,
+    leafTwo, leafThree, apple, stem);
+    Scene scene = new Scene(root, 400, 200, Color.PALETURQUOISE);
 
-    stage.setTitle("FXPractice");
+    stage.setTitle("Picture");
     stage.setScene(scene);
     stage.show();
   }
