@@ -12,8 +12,8 @@ import javafx.stage.Stage;
 public class Picture extends Application {
 
   public void start(Stage stage){
-    Text hello = new Text(200, 150, "Good Morning!");
-    Text question = new Text(220, 100, "Take the apple!");
+    Text hey = new Text(200, 150, "Hey!");
+    Text command = new Text(220, 100, "Take the apple!");
     Rectangle grass = new Rectangle(0, 150, 400, 200);
     Rectangle trunk = new Rectangle(40, 50, 20, 100);
     Circle sun = new Circle( 350, 40, 25);
@@ -21,7 +21,7 @@ public class Picture extends Application {
     Ellipse leafTwo = new Ellipse (30, 65, 40, 35);
     Ellipse leafThree = new Ellipse (65, 65, 40, 35);
     Circle apple = new Circle (60, 80, 5);
-    Line stem = new Line (60, 80, 60, 90);
+    Line stem = new Line (60, 70, 60, 80);
 
     trunk.setStroke(Color.SADDLEBROWN);
     trunk.setFill(Color.SADDLEBROWN);
@@ -39,8 +39,8 @@ public class Picture extends Application {
     apple.setFill(Color.CRIMSON);
     stem.setStroke(Color.DARKRED);
 
-    Group root = new Group(hello, question, grass, sun, trunk, leafOne,
-    leafTwo, leafThree, apple, stem);
+    Group root = new Group(hey, command, grass, sun, trunk, leafOne,
+    leafTwo, leafThree, stem, apple);
     Scene scene = new Scene(root, 400, 200, Color.PALETURQUOISE);
 
     stage.setTitle("Picture");
